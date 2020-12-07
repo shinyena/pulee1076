@@ -1,0 +1,162 @@
+<!--    화면명: 메인 화면 
+        화면설명: 가장 처음에 접하는 화면으로 원아들의 모습과 시설 환경을 보여준다.
+        작성자: 신예나
+        작성일: 2020.11.18 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>금강뿌리 어린이집</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        @font-face {
+            font-family: 'IBMPlexSansKR-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            font-family: 'IBMPlexSansKR-Regular';  /* 전체 폰트 설정 */
+        }         
+
+        @media only screen and (max-width : 768px) {
+                #nav {margin: 5px;}         /* 화면 크기에 따른 GNB margin 변경 */
+                #title {font-size: 20px;}   /* 화면크기에 따른 제목 폰트 크기 변경 */
+                #content {font-size: 8px;}  /* 화면크기에 따른 내용 폰트 크기 변경 */
+            }
+
+        @media only screen and (min-width : 768px) and  (max-width : 992px) {
+                #nav {margin: 15px;}        /* 화면 크기에 따른 GNB margin 변경 */
+                #title {font-size: 30px;}   /* 화면크기에 따른 제목 폰트 크기 변경 */
+                #content {font-size: 14px;} /* 화면크기에 따른 내용 폰트 크기 변경 */
+            }
+
+        @media only screen and (min-width : 992px) {
+                #nav {margin: 30px;}        /* 화면 크기에 따른 GNB margin 변경 */
+                #title {font-size: 30px;}   /* 화면크기에 따른 제목 폰트 크기 변경 */
+                #content {font-size: 14px;} /* 화면크기에 따른 내용 폰트 크기 변경 */
+            }
+        </style>
+    </head>
+    <body class="container">  <!-- 전체 사용화면 크기 조정 -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light"> <!-- 네비게이션 바 (md 사용) -->
+                <a class="navbar-brand" href="index.html"><b>금강뿌리어린이집</b></a> <!-- 메인화면 -->
+
+                <!-- 수직 정렬 됐을 때 사용할 버튼 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- 네비게이션 -->
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav font-weight-bold">
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="introduction.html">어린이집소개</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="class.html">반별소개</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="schedule.html">연간일정</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="study.html">보육과정</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+
+        <content> 
+            <!-- 슬라이드 이미지를 위한 carousel -->
+            <div id="demo" class="carousel slide m-auto" data-ride="carousel">
+
+                <!-- carousel 페이지 -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                  <li data-target="#demo" data-slide-to="3"></li>
+                  <li data-target="#demo" data-slide-to="4"></li>
+                  <li data-target="#demo" data-slide-to="5"></li>
+                </ul>
+              
+                <!-- carousel 이미지 및 설명 -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/img1.jpg" alt="img1">
+                    <div class="carousel-caption">
+                        <p id="title">해님반</p>
+                        <p id="content">드림파크 나들이</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/img2.jpg" alt="img2">
+                    <div class="carousel-caption">
+                        <p id="title">별님반</p>
+                        <p id="content">붕붕카 놀이</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/img3.jpg" alt="img3">
+                    <div class="carousel-caption">
+                        <p id="title">달님반</p>
+                        <p id="content">가을 나뭇잎 그리기</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/img4.jpg" alt="img4">
+                    <div class="carousel-caption">
+                        <p id="title">하늘반</p>
+                        <p id="content">실외 놀이터</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/img5.jpg" alt="img5">
+                    <div class="carousel-caption">
+                        <p id="title">은하수반</p>
+                        <p id="content">자동차 극장</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/img6.jpg" alt="img6">
+                    <div class="carousel-caption">
+                        <p id="title">별님반</p>
+                        <p id="content">드림파크 나들이</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- carousel 좌우이동버튼 -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              
+            </div>
+        </content>
+
+        <footer>
+            <p>
+            <div class="text-center small mt-3 mb-3">
+                 <!-- 저작권 정보 -->
+                <small>Copyright © 2020 <a href="mailto:tisdpsk98@gmail.com"> 가천대학교 컴퓨터공학과 신예나 </a> All Right Reserved</small>
+                <br>
+                <!-- 어린이집 정보 -->
+                <small>인천광역시 서구 청마로 124 관리동 1층 금강뿌리 어린이집 Tel.<a href="tel:032-562-1076" > 032-562-1076</small>
+            </div>
+        </footer>
+    </body>
+</html>

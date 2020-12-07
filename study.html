@@ -1,0 +1,119 @@
+<!--    화면명: 보육과정 화면 
+        화면설명: 표준 보육활동 내용에 따른 어린이집의 보육 과정 정보를 제공한다.
+        작성자: 신예나
+        작성일: 2020.11.18 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>보육과정 | 금강뿌리어린이집</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+        @font-face {
+            font-family: 'IBMPlexSansKR-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            font-family: 'IBMPlexSansKR-Regular'; /* 전체 폰트 설정 */
+        }
+
+        @media only screen and (max-width : 768px) {
+                #nav {margin: 5px;} /* 화면 크기에 따른 GNB margin 변경 */
+            }
+
+            @media only screen and (min-width : 768px) and  (max-width : 992px) {
+                #nav {margin: 15px;} /* 화면 크기에 따른 GNB margin 변경 */
+            }
+
+            @media only screen and (min-width : 992px) {
+                #nav {margin: 30px;} /* 화면 크기에 따른 GNB margin 변경 */
+            } 
+
+        </style>
+    </head>
+    <body class="container">  <!-- 전체 사용화면 크기 조정 -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light"> <!-- 네비게이션 바 (md 사용) -->
+                <a class="navbar-brand" href="index.html"><b>금강뿌리어린이집</b></a> <!-- 메인화면 -->
+
+                <!-- 수직 정렬 됐을 때 사용할 버튼 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+                
+                <!-- 네비게이션 -->
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav font-weight-bold">
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="introduction.html">어린이집소개</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="class.html">반별소개</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="schedule.html">연간일정</a>
+                        </li>
+                        <li class="nav-item active" id="nav">
+                            <a class="nav-link" href="study.html">보육과정</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <content>
+            <div><img src="img/banner.png" class="img-fluid" alt="banner" style="width:100%;"></div> <!-- 배너 이미지-->
+
+            <div class="row"> <!-- Grid System -->
+                <div class="col-md-4 p-3"> <!-- 기본생활 3/12 -->
+                    <img class="mx-auto d-block" style="width: 100%;" src="img/study1.jpg" alt="study1">
+                    <h5 class="m-2">|기본생활</h5>
+                    <small class="m-2">건강, 안전한 생활에 관한 지식, 기술, 태도를 배우고 익히며 올바른 습관을 길러,  자신이 건강과 안전을 자기 스스로 보호하고 타인을 존중하며 즐겁게 생활한다.</small>
+                </div>
+                <div class="col-md-4 p-3"> <!-- 신체운동 3/12 -->
+                    <img class="mx-auto d-block" style="width: 100%;" src="img/study2.jpg" alt="study2">
+                    <h5 class="m-2">|신체운동</h5>
+                    <small class="m-2">자신의 신체를 긍정적으로 인식하고 즐겁게 신체활동에 참여함으로써 영유아기에 필요한 기본 운동능력을 기른다.</small>
+                </div>
+                <div class="col-md-4 p-3"> <!-- 사회관계 3/12 -->
+                    <img class="mx-auto d-block" style="width: 100%;" src="img/study3.jpg" alt="study3">
+                    <h5 class="m-2">|사회관계</h5>
+                    <small class="m-2">자신의 존중감을 키우고 다른 사람의 정서를 인식하고 가족, 또래, 지역사회와 긍정적 관계를 형성하여 사회구성원으로 지식을 획득한다.</small>
+                </div>
+                <div class="col-md-4 p-3"> <!-- 의사소통 3/12 -->
+                    <img class="mx-auto d-block" style="width: 100%;" src="img/study4.jpg" alt="study4">
+                    <h5 class="m-2">|의사소통</h5>
+                    <small class="m-2">듣고 말하는 것을 즐기며 상황에 맞는 언어를 익혀 바른 언어생활을 하고 의사소통 능력과 기초적인 문장능력을 기른다.</small>
+                </div>
+                <div class="col-md-4 p-3"> <!-- 자연탐구 3/12 -->
+                    <img class="mx-auto d-block" style="width: 100%;" src="img/study5.jpg" alt="study5">
+                    <h5 class="m-2">|자연탐구</h5>
+                    <small class="m-2">주변사물과 자연현상을 지각하고 호기심을 가지며 지속적으로 탐구하는 태도와 문제해결의 기초능력을 기르고 자연을  사랑하는 마음을 가진다.</small>
+                </div>
+                <div class="col-md-4 p-3"> <!-- 예술경험 3/12 -->
+                    <img class="mx-auto d-block" style="width: 100%;" src="img/study6.jpg" alt="study6">
+                    <h5 class="m-2">|예술경험</h5>
+                    <small class="m-2">주변의 친근한 환경과 생활에서 예술적 요소에 관심을 보이고 흥미롭게 경험하고 탐색함으로써 창의성과 감성을 기른다.</small>
+                </div>
+            </div>
+
+        </content>
+
+        <footer>
+            <p>
+            <div class="text-center small mt-3 mb-3">
+                <!-- 저작권 정보 -->
+                <small>Copyright © 2020 <a href="mailto:tisdpsk98@gmail.com"> 가천대학교 컴퓨터공학과 신예나 </a> All Right Reserved</small>
+                <br>
+                <!-- 어린이집 정보 -->
+                <small>인천광역시 서구 청마로 124 관리동 1층 금강뿌리 어린이집 Tel.<a href="tel:032-562-1076" > 032-562-1076</small>
+            </div>
+        </footer>
+    </body>
+</html>

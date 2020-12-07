@@ -1,0 +1,139 @@
+<!--    화면명: 어린이집 소개 화면 
+        화면설명: 어린이집을 소개하는 화면으로 어린이집의 보육 이념과 어린이집의 위치 정보를 제공한다.
+        작성자: 신예나
+        작성일: 2020.11.18 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>어린이집소개 | 금강뿌리어린이집</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            @font-face {
+                font-family: 'IBMPlexSansKR-Regular';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            * {
+                font-family: 'IBMPlexSansKR-Regular'; /* 전체 폰트 설정 */
+            }
+
+            @media only screen and (max-width : 768px) {
+                #nav {margin: 5px;}                    /* 화면 크기에 따른 GNB margin 변경 */
+                #map {font-size: 10px; padding: 10px;} /* 화면크기에 따른 주소 폰트 변경*/
+            }
+
+            @media only screen and (min-width : 768px) and  (max-width : 992px) {
+                #nav {margin: 15px;}                    /* 화면 크기에 따른 GNB margin 변경 */
+                #map {font-size: 16px; padding: 20px;}  /* 화면크기에 따른 주소 폰트 변경*/
+            }
+
+            @media only screen and (min-width : 992px) {
+                #nav {margin: 30px;}                    /* 화면 크기에 따른 GNB margin 변경 */
+                #map {font-size: 16px; padding: 20px;}  /* 화면크기에 따른 주소 폰트 변경*/
+            }
+        </style>
+    </head>
+    <body class="container">  <!-- 전체 사용화면 크기 조정 -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light"> <!-- 네비게이션 바 (md 사용) -->
+                <a class="navbar-brand" href="index.html"><b>금강뿌리어린이집</b></a> <!-- 메인화면 -->
+
+                <!-- 수직 정렬 됐을 때 사용할 버튼 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- 네비게이션 -->
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav font-weight-bold">
+                        <li class="nav-item active" id="nav">
+                            <a class="nav-link" href="introduction.html">어린이집소개</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="class.html">반별소개</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="schedule.html">연간일정</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="study.html">보육과정</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <content>
+            <div><img src="img/banner.png" class="img-fluid" alt="banner" style="width:100%;"></div> <!-- 배너 이미지 -->
+
+            <ul class="nav nav-tabs mt-3"> <!-- tab 네비게이션 -->
+                <li class="nav-item"> <!-- 첫번째 탭 (보육이념) -->
+                  <a class="nav-link active" data-toggle="tab" href="#menu1" style="color:black; font-size:small;">보육이념</a>
+                </li>
+                <li class="nav-item"> <!-- 두번째 탭 (오시는길) -->
+                  <a class="nav-link" data-toggle="tab" href="#menu2" style="color:black; font-size:small;">오시는길</a>
+                </li>
+            </ul>
+
+            <div class="tab-content"> <!-- tab 구성내용 시작 -->
+                <div id="menu1" class="container tab-pane active"> <!-- 첫번째 탭 (보육이념) -->
+                    <div class="row"> <!-- Grid System -->
+                        <div class="col-md-1"></div> <!-- 1/12 -->
+                        <div class="col-md-3"> <!-- 3/12 -->
+                            <br><br><img src="img/squirrel.jpg" alt="squirrel" style="width: 100%;" class="mx-auto d-block">
+                        </div>
+                        <div class="col-md-1"></div> <!-- 1/12 -->
+                        <div class="col-md-7"> <!-- 7/12 -->
+                            <br>
+                            <h4><b>원훈</b></h4>
+                            <ol>
+                                <li>예의바른 어린이</li>
+                                <li>사랑하고 감사할 줄 아는 어린이</li>
+                                <li>창의적으로 생각하는 어린이</li>
+                            </ol>
+
+                            <h4><b>보육목표</b></h4> 
+                            <ol>
+                                <li>올바른 기본생활 습관을 형성한다.</li>
+                                <li>배려하며 협력하는 사회성 발달을 촉진 시킨다.</li>
+                                <li>자신의 생각과 느낌을 창의적으로 표현하도록 한다.</li>
+                                <li>몸과 마음이 건강하게 자랄 수 있는 경험을 한다.</li>
+                                <li>사랑하고 감사할 줄 아는 사람으로 성장하게 한다.</li>
+                            </ol>
+                        </div>
+                    </div>                    
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br> <!-- 두번째 탭 (오시는길) -->
+                    <div class="row"> <!-- Grid System -->                        
+                        <div class="col-md-2"></div> <!-- 2/12 -->
+                        <div class="col-md-8"> <!-- 8/12 -->
+                            <!-- 지도 -->
+                            <a href="https://map.naver.com/v5/entry/place/16990735?c=14101598.6244046,4521490.2831101,15,0,0,0,dh">
+                                <img src="img/map.png" alt="map" style="width: 100%;" class="mx-auto d-block"></a>
+                            <!-- 주소 -->
+                            <p id="map" style="text-align: center; background-color:rgb(186, 214, 194);">인천광역시 서구 청마로 124 관리동 1층 금강뿌리 어린이집</p> 
+                        </div>
+                        <div class="col-md-2"></div> <!-- 2/12 -->
+                    </div>
+                </div>
+            </div>
+        </content>
+
+        <footer>
+            <p>
+            <div class="text-center small mt-3 mb-3">
+                <!-- 저작권 정보 -->
+                <small>Copyright © 2020 <a href="mailto:tisdpsk98@gmail.com"> 가천대학교 컴퓨터공학과 신예나 </a> All Right Reserved</small>
+                <br>
+                <!-- 어린이집 정보 -->
+                <small>인천광역시 서구 청마로 124 관리동 1층 금강뿌리 어린이집 Tel.<a href="tel:032-562-1076" > 032-562-1076</small>
+            </div>
+        </footer>
+    </body>
+</html>

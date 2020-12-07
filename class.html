@@ -1,0 +1,130 @@
+<!--    화면명: 반별 소개 화면 
+        화면설명: 어린이집의 각 반을 동영상을 통해 소개하여 어린이집 시설 환경에 대한 정보를 제공한다.
+        작성자: 신예나
+        작성일: 2020.11.18 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>반별소개 | 금강뿌리어린이집</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            @font-face { 
+                font-family: 'IBMPlexSansKR-Regular';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            * {
+                font-family: 'IBMPlexSansKR-Regular'; /* 전체 폰트 설정 */
+            }
+
+            @media only screen and (max-width : 768px) {
+                #video {width: 100%;} /* 화면크기에 따른 동영상 크기 변경*/
+                #nav {margin: 5px;} /* 화면 크기에 따른 GNB margin 변경 */
+            }
+
+            @media only screen and (min-width : 768px) and  (max-width : 992px) {
+                #video {width: 100%;} /* 화면크기에 따른 동영상 크기 변경*/
+                #nav {margin: 15px;} /* 화면 크기에 따른 GNB margin 변경 */
+            }
+
+            @media only screen and (min-width : 992px) {
+                #video {width: 50%;} /* 화면크기에 따른 동영상 크기 변경*/
+                #nav {margin: 30px;} /* 화면 크기에 따른 GNB margin 변경 */
+            }
+
+        </style>
+    </head>
+    <body class="container"> <!-- 전체 사용화면 크기 조정 -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light"> <!-- 네비게이션 바 (md 사용) -->
+                <a class="navbar-brand" href="index.html"><b>금강뿌리어린이집</b></a> <!-- 메인화면 -->
+
+                <!-- 수직 정렬 됐을 때 사용할 버튼 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- 네비게이션 -->
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav font-weight-bold">
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="introduction.html">어린이집소개</a>
+                        </li>
+                        <li class="nav-item active" id="nav">
+                            <a class="nav-link" href="class.html">반별소개</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="schedule.html">연간일정</a>
+                        </li>
+                        <li class="nav-item" id="nav">
+                            <a class="nav-link" href="study.html">보육과정</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+
+        <content>
+            <div><img src="img/banner.png" class="img-fluid" alt="banner" style="width:100%;"></div> <!-- 배너 이미지 -->
+
+            <ul class="nav nav-tabs nav-justified mt-3">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#menu1" style="color:black; font-size:small;">해님반(만1세)</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu2" style="color:black; font-size:small;">은하수반(만1세)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu3" style="color:black; font-size:small;">달님반(만2세)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu4" style="color:black; font-size:small;">별님반(만2세)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu5" style="color:black; font-size:small;">하늘반(만3세)</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">  <!-- tab 구성내용 시작 -->
+                <div id="menu1" class="container tab-pane active"><br> <!-- 첫번째 탭 (해님반) -->
+                    <h4 style="text-align: center;"><b>[해님반] 정은정 선생님</b></h4><br>
+                    <video controls class="mx-auto d-block" id="video"><source src="video/class_sun.mp4" type="video/mp4"></video>
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br> <!-- 두번째 탭 (은하수반) -->
+                        <h4 style="text-align: center;"><b>[은하수반] 김유진 선생님</b></h4><br>
+                        <video controls class="mx-auto d-block" id="video"><source src="video/class_galaxy.mp4" type="video/mp4"></video>
+                </div>
+                <div id="menu3" class="container tab-pane fade"><br> <!-- 세번째 탭 (달님반) -->
+                    <h4 style="text-align: center;"><b>[달님반] 박일홍 선생님</b></h4><br>
+                    <video controls class="mx-auto d-block" id="video"><source src="video/class_moon.mp4" type="video/mp4"></video>
+                </div>
+                <div id="menu4" class="container tab-pane fade"><br> <!-- 네번째 탭 (별님반) -->
+                    <h4 style="text-align: center;"><b>[별님반] 김혜나 선생님</b></h4><br>
+                    <video controls class="mx-auto d-block" id="video"><source src="video/class_star.mp4" type="video/mp4"></video>
+                </div>
+                <div id="menu5" class="container tab-pane fade"><br> <!-- 다섯번째 탭 (하늘반) -->
+                    <h4 style="text-align: center;"><b>[하늘반] 손화연 선생님</b></h4><br>
+                    <video controls class="mx-auto d-block" id="video"><source src="video/class_sky.mp4" type="video/mp4"></video>
+                </div>
+            </div>
+        </content>
+
+        <footer>
+            <p>
+            <div class="text-center small mt-3 mb-3">
+                <!-- 저작권 정보 -->
+                <small>Copyright © 2020 <a href="mailto:tisdpsk98@gmail.com"> 가천대학교 컴퓨터공학과 신예나 </a> All Right Reserved</small>
+                <br>
+                <!-- 어린이집 정보 -->
+                <small>인천광역시 서구 청마로 124 관리동 1층 금강뿌리 어린이집 Tel.<a href="tel:032-562-1076" > 032-562-1076</small>
+            </div>
+        </footer>
+    </body>
+</html>
