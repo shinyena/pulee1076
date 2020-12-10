@@ -4,263 +4,397 @@
         작성일: 2020.11.18 -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>연간일정 | 금강뿌리어린이집</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <style>
-            @font-face {
-                font-family: 'IBMPlexSansKR-Regular';
-                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
-                font-weight: normal;
-                font-style: normal;
-            }
-            * {
-                font-family: 'IBMPlexSansKR-Regular'; /* 전체 폰트 설정 */
-            }
 
-            @media only screen and (max-width : 768px) {
-                #nav {margin: 5px;}     /* 화면 크기에 따른 GNB margin 변경 */
-                #menu1 {width: 100%;}   /* 화면 크기에 따른 사용 (봄) 화면 크기 조절*/
-                #menu2 {width: 100%;}   /* 화면 크기에 따른 사용 (여름) 화면 크기 조절*/
-                #menu3 {width: 100%;}   /* 화면 크기에 따른 사용 (가을) 화면 크기 조절*/
-                #menu4 {width: 100%;}   /* 화면 크기에 따른 사용 (겨울) 화면 크기 조절*/
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>연간일정 | 금강뿌리어린이집</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'IBMPlexSansKR-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-            @media only screen and (min-width : 768px) and  (max-width : 992px) {
-                #nav {margin: 15px;}    /* 화면 크기에 따른 GNB margin 변경 */
-                #menu1 {width: 80%;}    /* 화면 크기에 따른 사용 (봄) 화면 크기 조절*/
-                #menu2 {width: 80%;}    /* 화면 크기에 따른 사용 (여름) 화면 크기 조절*/
-                #menu3 {width: 80%;}    /* 화면 크기에 따른 사용 (가을) 화면 크기 조절*/
-                #menu4 {width: 80%;}    /* 화면 크기에 따른 사용 (겨울) 화면 크기 조절*/
+        * {
+            font-family: 'IBMPlexSansKR-Regular';
+            /* 전체 폰트 설정 */
+        }
+
+        @media only screen and (max-width : 768px) {
+            #nav {
+                margin: 5px;
             }
 
-            @media only screen and (min-width : 992px) {
-                #nav {margin: 30px;}    /* 화면 크기에 따른 GNB margin 변경 */
-                #menu1 {width: 80%;}    /* 화면 크기에 따른 사용 (봄) 화면 크기 조절*/
-                #menu2 {width: 80%;}    /* 화면 크기에 따른 사용 (여름) 화면 크기 조절*/
-                #menu3 {width: 80%;}    /* 화면 크기에 따른 사용 (가을) 화면 크기 조절*/
-                #menu4 {width: 80%;}    /* 화면 크기에 따른 사용 (겨울) 화면 크기 조절*/
+            /* 화면 크기에 따른 GNB margin 변경 */
+            #menu1 {
+                width: 100%;
             }
 
-        </style>
-    </head>
-    <body class="container">  <!-- 전체 사용화면 크기 조정 -->
-        <header>
-            <nav class="navbar navbar-expand-md navbar-light"> <!-- 네비게이션 바 (md 사용) -->
-                <a class="navbar-brand" href="index.html"><b>금강뿌리어린이집</b></a> <!-- 메인화면 -->
+            /* 화면 크기에 따른 사용 (봄) 화면 크기 조절*/
+            #menu2 {
+                width: 100%;
+            }
 
-                <!-- 수직 정렬 됐을 때 사용할 버튼 -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <!-- 네비게이션 -->
-                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
-                    <ul class="navbar-nav font-weight-bold">
-                        <li class="nav-item" id="nav">
-                            <a class="nav-link" href="introduction.html">어린이집소개</a>
-                        </li>
-                        <li class="nav-item" id="nav">
-                            <a class="nav-link" href="class.html">반별소개</a>
-                        </li>
-                        <li class="nav-item active" id="nav">
-                            <a class="nav-link" href="schedule.html">연간일정</a>
-                        </li>
-                        <li class="nav-item" id="nav">
-                            <a class="nav-link" href="study.html">보육과정</a>
-                        </li>
+            /* 화면 크기에 따른 사용 (여름) 화면 크기 조절*/
+            #menu3 {
+                width: 100%;
+            }
+
+            /* 화면 크기에 따른 사용 (가을) 화면 크기 조절*/
+            #menu4 {
+                width: 100%;
+            }
+
+            /* 화면 크기에 따른 사용 (겨울) 화면 크기 조절*/
+        }
+
+        @media only screen and (min-width : 768px) and (max-width : 992px) {
+            #nav {
+                margin: 15px;
+            }
+
+            /* 화면 크기에 따른 GNB margin 변경 */
+            #menu1 {
+                width: 80%;
+            }
+
+            /* 화면 크기에 따른 사용 (봄) 화면 크기 조절*/
+            #menu2 {
+                width: 80%;
+            }
+
+            /* 화면 크기에 따른 사용 (여름) 화면 크기 조절*/
+            #menu3 {
+                width: 80%;
+            }
+
+            /* 화면 크기에 따른 사용 (가을) 화면 크기 조절*/
+            #menu4 {
+                width: 80%;
+            }
+
+            /* 화면 크기에 따른 사용 (겨울) 화면 크기 조절*/
+        }
+
+        @media only screen and (min-width : 992px) {
+            #nav {
+                margin: 30px;
+            }
+
+            /* 화면 크기에 따른 GNB margin 변경 */
+            #menu1 {
+                width: 80%;
+            }
+
+            /* 화면 크기에 따른 사용 (봄) 화면 크기 조절*/
+            #menu2 {
+                width: 80%;
+            }
+
+            /* 화면 크기에 따른 사용 (여름) 화면 크기 조절*/
+            #menu3 {
+                width: 80%;
+            }
+
+            /* 화면 크기에 따른 사용 (가을) 화면 크기 조절*/
+            #menu4 {
+                width: 80%;
+            }
+
+            /* 화면 크기에 따른 사용 (겨울) 화면 크기 조절*/
+        }
+    </style>
+</head>
+
+<body class="container">
+    <!-- 전체 사용화면 크기 조정 -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <!-- 네비게이션 바 (md 사용) -->
+            <a class="navbar-brand" href="index.html"><b>금강뿌리어린이집</b></a> <!-- 메인화면 -->
+
+            <!-- 수직 정렬 됐을 때 사용할 버튼 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 네비게이션 -->
+            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                <ul class="navbar-nav font-weight-bold">
+                    <li class="nav-item" id="nav">
+                        <a class="nav-link" href="introduction.html">어린이집소개</a>
+                    </li>
+                    <li class="nav-item" id="nav">
+                        <a class="nav-link" href="class.html">반별소개</a>
+                    </li>
+                    <li class="nav-item active" id="nav">
+                        <a class="nav-link" href="schedule.html">연간일정</a>
+                    </li>
+                    <li class="nav-item" id="nav">
+                        <a class="nav-link" href="study.html">보육과정</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <content>
+        <div><img src="img/banner.png" class="img-fluid" alt="banner" style="width:100%;"></div> <!-- 배너 이미지 -->
+
+        <ul class="nav nav-tabs nav-justified mt-3">
+            <!-- tab 네비게이션 -->
+            <li class="nav-item">
+                <!-- 첫번째 탭 (봄) -->
+                <a class="nav-link active" data-toggle="tab" href="#menu1"
+                    style="color:black; font-size:small;">spring</a>
+            </li>
+            <li class="nav-item">
+                <!-- 두번째 탭 (여름) -->
+                <a class="nav-link" data-toggle="tab" href="#menu2" style="color:black; font-size:small;">summer</a>
+            </li>
+            <li class="nav-item">
+                <!-- 세번째 탭 (가을) -->
+                <a class="nav-link" data-toggle="tab" href="#menu3" style="color:black; font-size:small;">fall</a>
+            </li>
+            <li class="nav-item">
+                <!-- 네번째 탭 (겨울) -->
+                <a class="nav-link" data-toggle="tab" href="#menu4" style="color:black; font-size:small;">winter</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- tab 구성내용 시작 -->
+            <div id="menu1" class="container tab-pane active""><br> <!-- 첫번째 탭 (봄) -->
+                    <div class=" row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>3월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li>신입원아오리엔테이션&부모교육</li>
+                        <li>요리활동</li>
+                        <li><a href=https://www.seo.incheon.kr/open_content/clinic style="color: red;">[지역사회]
+                                어린이건강체험관-서구보건소</a></li>
+                        <li>실내놀이터</li>
                     </ul>
                 </div>
-            </nav>
-        </header>
-
-        <content>
-            <div><img src="img/banner.png" class="img-fluid" alt="banner" style="width:100%;"></div> <!-- 배너 이미지 -->
-            
-            <ul class="nav nav-tabs nav-justified mt-3"> <!-- tab 네비게이션 -->
-                <li class="nav-item"> <!-- 첫번째 탭 (봄) -->
-                  <a class="nav-link active" data-toggle="tab" href="#menu1" style="color:black; font-size:small;">spring</a>
-                </li>
-                <li class="nav-item"> <!-- 두번째 탭 (여름) -->
-                  <a class="nav-link" data-toggle="tab" href="#menu2" style="color:black; font-size:small;">summer</a>
-                </li>
-                <li class="nav-item"> <!-- 세번째 탭 (가을) -->
-                    <a class="nav-link" data-toggle="tab" href="#menu3" style="color:black; font-size:small;">fall</a>
-                </li>
-                <li class="nav-item"> <!-- 네번째 탭 (겨울) -->
-                    <a class="nav-link" data-toggle="tab" href="#menu4" style="color:black; font-size:small;">winter</a>
-                </li>
-            </ul>
-
-            <div class="tab-content">  <!-- tab 구성내용 시작 -->
-                <div id="menu1" class="container tab-pane active""><br> <!-- 첫번째 탭 (봄) -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>3월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li>신입원아오리엔테이션&부모교육</li>
-                                <li>요리활동</li>
-                                <li><a href=https://www.seo.incheon.kr/open_content/clinic style="color: red;">[지역사회] 어린이건강체험관-서구보건소</a></li>
-                                <li>실내놀이터</li>
-                            </ul>   
-                        </div>
-                    </div>
-                    <hr>                                                <!-- 중간선 -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>4월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li>식목일 행사</li>
-                                <li><a href="https://www.nibr.go.kr/cmn/main/main.do" style="color: red;">[지역사회] 국립생물자원관</a></li>
-                                <li>1학기 부모상담</li>
-                                <li>생일파티 (3,4월)</li>
-                            </ul>   
-                        </div>
-                    </div>
-                    <hr>                                                <!-- 중간선 -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>5월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li>어린이날, 어버이날 행사</li>
-                                <li><a href="https://www.ccfsm.foodnara.go.kr/incheonseogu/" style="color: red;">[지역사회] 어린이뮤지컬-검단급식센터</a></li>
-                                <li>나비공원</li>
-                                <li><a href="http://www.issi.or.kr/park/design/contents.asp?code=1010" style="color: red;">[지역사회] 장미공원-서곶근린공원</a></li>
-                            </ul>   
-                        </div>
-                    </div>                    
-                </div>
-
-                <div id="menu2" class="container tab-pane fade"><br>    <!-- 두번째 탭 (여름) -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>6월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li><a href="https://map.naver.com/v5/entry/place/21403739?c=14093883.755311292,4513219.865778172,15,0,0,0,dh&placePath=%3Fentry=plt%26from=nx" style="color: red;">[지역사회] 꽃이랑책이랑-청라생태공원</a></li>
-                                <li>생일파티 (5,6월)</li>
-                                <li>김포공항</li>
-                                <li>부모참여활동</li>
-                            </ul>   
-                        </div>
-                    </div>
-                    <hr>                                                <!-- 중간선 -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>7월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li>키즈카페</li>
-                                <li>1학기 신체검사</li>
-                                <li><a href="https://www.ccfsm.foodnara.go.kr/incheonseogu/" style="color: red;">[지역사회] 어린이방문교육-검단급식센터</a></li>
-                                <li>물총놀이 & 물놀이</li>
-                            </ul>   
-                        </div>
-                    </div>
-                    <hr>                                                <!-- 중간선 -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>8월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li>여름가정학습</li>
-                                <li>물총놀이 & 물놀이</li>
-                                <li><a href="https://www.seo.incheon.kr/open_content/tour/attractions/jeongseojin.jsp" style="color: red;">[지역사회] 정서진</a></li>
-                                <li>생일파티 (7,8월)</li>
-                            </ul>   
-                        </div>
-                    </div>           
-                </div>
-
-                <div id="menu3" class="container tab-pane fade"><br>    <!-- 세번째 탭 (가을) -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>9월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li><a href="http://encykorea.aks.ac.kr/Contents/Item/E0047071" style="color: red;">[지역사회] 녹청자도요지</a></li>
-                                <li>2학기 부모상담</li>
-                                <li>생일파티 (9,10월)</li>
-                                <li>[지역사회] 포도밭</li>
-                            </ul>   
-                        </div>
-                    </div>
-                    <hr>                                                <!-- 중간선 -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>10월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li><a href="https://map.naver.com/v5/entry/place/16953983?placeSearchOption=fromNxList=true%26noredirect=1%26entry=pll&c=14096468.9832095,4519635.4908456,13,0,0,0,dh&placePath=%2Fhome%3Fentry=pll" style="color: red;">[지역사회] 국화축제-드림파크</a></li>
-                                <li>수도국산박물관</li>
-                                <li>부모참여활동(가을나들이)</li>
-                                <li>동화마을</li>
-                            </ul>   
-                        </div>
-                    </div>
-                    <hr>                                                <!-- 중간선 -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>11월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li>어린이과학관</li>
-                                <li>기후 체험관</li>
-                                <li><a href="https://map.naver.com/v5/entry/place/1934267570?c=14084702.4581678,4542494.9396172,13,0,0,0,dh&placePath=%3Fentry%253Dpll%2526" style="color: red;">[지역사회] 에코빌리지</a></li>
-                                <li>부모참여활동(김치담그기)</li>
-                            </ul>   
-                        </div>
-                    </div>                               
-                </div>
-
-                <div id="menu4" class="container tab-pane fade"><br>    <!-- 네번째 탭 (겨울) -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>12월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li>2학기 신체검사</li>
-                                <li>생일파티 (11,12월)</li>
-                                <li>[지역사회] 산타파티</li>
-                                <li>겨울가정학습</li>
-                            </ul>   
-                        </div>
-                    </div>
-                    <hr>                                                <!-- 중간선 -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>1월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li>뮤지컬 관람</li>
-                                <li>부모참여활동(작품전시회 및 재롱발표회)</li>
-                                <li>예절교육</li>
-                                <li>[지역사회] 노인정 방문-세배드리기</li>
-                            </ul>   
-                        </div>
-                    </div>
-                    <hr>                                                <!-- 중간선 -->
-                    <div class="row">                                   <!-- Grid System -->
-                        <div class="col-md-4"><h4>2월</h4></div> <!-- 제목 4/12 -->
-                        <div class="col-md-8">                          <!-- 내용 8/12 -->
-                            <ul type="circle">
-                                <li>생일파티 (1,2월)</li>
-                                <li><a href="https://www.seo.incheon.kr/open_content/clinic/bbs/bbsMsgDetail.do?msg_seq=1131&bcd=health_news" style="color: red;">[지역사회] 어린이건강체험관</a></li>
-                                <li><a href="http://www.inmuseum.or.kr/kor/museum/index.php?m_code=MUSEUM1542071086" style="color: red;">[지역사회] 검단선사박물관</a></li>
-                                <li>수료식</li>
-                            </ul>   
-                        </div>
-                    </div>                               
-                </div>
-                
-        </content>
-
-        <footer>
-            <p>
-            <div class="text-center small mt-3 mb-3">
-                <!-- 저작권 정보 -->
-                <small>Copyright © 2020 <a href="mailto:tisdpsk98@gmail.com"> 가천대학교 컴퓨터공학과 신예나 </a> All Right Reserved</small>
-                <br>
-                <!-- 어린이집 정보 -->
-                <small>인천광역시 서구 청마로 124 관리동 1층 금강뿌리 어린이집 Tel.<a href="tel:032-562-1076" > 032-562-1076</small>
             </div>
-        </footer>
-    </body>
+            <hr> <!-- 중간선 -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>4월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li>식목일 행사</li>
+                        <li><a href="https://www.nibr.go.kr/cmn/main/main.do" style="color: red;">[지역사회] 국립생물자원관</a>
+                        </li>
+                        <li>1학기 부모상담</li>
+                        <li>생일파티 (3,4월)</li>
+                    </ul>
+                </div>
+            </div>
+            <hr> <!-- 중간선 -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>5월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li>어린이날, 어버이날 행사</li>
+                        <li><a href="https://www.ccfsm.foodnara.go.kr/incheonseogu/" style="color: red;">[지역사회]
+                                어린이뮤지컬-검단급식센터</a></li>
+                        <li>나비공원</li>
+                        <li><a href="http://www.issi.or.kr/park/design/contents.asp?code=1010"
+                                style="color: red;">[지역사회] 장미공원-서곶근린공원</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu2" class="container tab-pane fade"><br> <!-- 두번째 탭 (여름) -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>6월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li><a href="https://map.naver.com/v5/entry/place/21403739?c=14093883.755311292,4513219.865778172,15,0,0,0,dh&placePath=%3Fentry=plt%26from=nx"
+                                style="color: red;">[지역사회] 꽃이랑책이랑-청라생태공원</a></li>
+                        <li>생일파티 (5,6월)</li>
+                        <li>김포공항</li>
+                        <li>부모참여활동</li>
+                    </ul>
+                </div>
+            </div>
+            <hr> <!-- 중간선 -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>7월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li>키즈카페</li>
+                        <li>1학기 신체검사</li>
+                        <li><a href="https://www.ccfsm.foodnara.go.kr/incheonseogu/" style="color: red;">[지역사회]
+                                어린이방문교육-검단급식센터</a></li>
+                        <li>물총놀이 & 물놀이</li>
+                    </ul>
+                </div>
+            </div>
+            <hr> <!-- 중간선 -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>8월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li>여름가정학습</li>
+                        <li>물총놀이 & 물놀이</li>
+                        <li><a href="https://www.seo.incheon.kr/open_content/tour/attractions/jeongseojin.jsp"
+                                style="color: red;">[지역사회] 정서진</a></li>
+                        <li>생일파티 (7,8월)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu3" class="container tab-pane fade"><br> <!-- 세번째 탭 (가을) -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>9월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li><a href="http://encykorea.aks.ac.kr/Contents/Item/E0047071" style="color: red;">[지역사회]
+                                녹청자도요지</a></li>
+                        <li>2학기 부모상담</li>
+                        <li>생일파티 (9,10월)</li>
+                        <li>[지역사회] 포도밭</li>
+                    </ul>
+                </div>
+            </div>
+            <hr> <!-- 중간선 -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>10월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li><a href="https://map.naver.com/v5/entry/place/16953983?placeSearchOption=fromNxList=true%26noredirect=1%26entry=pll&c=14096468.9832095,4519635.4908456,13,0,0,0,dh&placePath=%2Fhome%3Fentry=pll"
+                                style="color: red;">[지역사회] 국화축제-드림파크</a></li>
+                        <li>수도국산박물관</li>
+                        <li>부모참여활동(가을나들이)</li>
+                        <li>동화마을</li>
+                    </ul>
+                </div>
+            </div>
+            <hr> <!-- 중간선 -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>11월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li>어린이과학관</li>
+                        <li>기후 체험관</li>
+                        <li><a href="https://map.naver.com/v5/entry/place/1934267570?c=14084702.4581678,4542494.9396172,13,0,0,0,dh&placePath=%3Fentry%253Dpll%2526"
+                                style="color: red;">[지역사회] 에코빌리지</a></li>
+                        <li>부모참여활동(김치담그기)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu4" class="container tab-pane fade"><br> <!-- 네번째 탭 (겨울) -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>12월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li>2학기 신체검사</li>
+                        <li>생일파티 (11,12월)</li>
+                        <li>[지역사회] 산타파티</li>
+                        <li>겨울가정학습</li>
+                    </ul>
+                </div>
+            </div>
+            <hr> <!-- 중간선 -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>1월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li>뮤지컬 관람</li>
+                        <li>부모참여활동(작품전시회 및 재롱발표회)</li>
+                        <li>예절교육</li>
+                        <li>[지역사회] 노인정 방문-세배드리기</li>
+                    </ul>
+                </div>
+            </div>
+            <hr> <!-- 중간선 -->
+            <div class="row">
+                <!-- Grid System -->
+                <div class="col-md-4">
+                    <h4>2월</h4>
+                </div> <!-- 제목 4/12 -->
+                <div class="col-md-8">
+                    <!-- 내용 8/12 -->
+                    <ul type="circle">
+                        <li>생일파티 (1,2월)</li>
+                        <li><a href="https://www.seo.incheon.kr/open_content/clinic/bbs/bbsMsgDetail.do?msg_seq=1131&bcd=health_news"
+                                style="color: red;">[지역사회] 어린이건강체험관</a></li>
+                        <li><a href="http://www.inmuseum.or.kr/kor/museum/index.php?m_code=MUSEUM1542071086"
+                                style="color: red;">[지역사회] 검단선사박물관</a></li>
+                        <li>수료식</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </content>
+
+    <footer>
+        <p>
+        <div class="text-center small mt-3 mb-3">
+            <!-- 저작권 정보 -->
+            <small>Copyright © 2020 <a href="mailto:tisdpsk98@gmail.com"> 가천대학교 컴퓨터공학과 신예나 </a> All Right
+                Reserved</small>
+            <br>
+            <!-- 어린이집 정보 -->
+            <small>인천광역시 서구 청마로 124 관리동 1층 금강뿌리 어린이집 Tel.<a href="tel:032-562-1076"> 032-562-1076</small>
+        </div>
+    </footer>
+</body>
+
 </html>
