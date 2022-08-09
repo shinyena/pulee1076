@@ -7,7 +7,7 @@
 
 |description|mobile web|PC web|
 |:---:|:---:|:---:|
-|메인화면<br>[index.html](index.html)|<img src="readmeImg/mobile1.jpg" height="200">|![](readmeImg/pc1.png)|
+|메인화면<br>[index.html](index.html)|<img src="readmeImg/mobile1.jpg" height="500">|![](readmeImg/pc1.png)|
 |어린이집 소개<br>[introduction.html](introduction.html)|![](readmeImg/mobile2.jpg)|![](readmeImg/pc2.png)|
 |반별소개<br>[class.html](class.html)|![](readmeImg/mobile3.jpg)|![](readmeImg/pc3.png)|
 |연간일정<br>[schedule.html](schedule.html)|![](readmeImg/mobile4.jpg)|![](readmeImg/pc4.png)|
