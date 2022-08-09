@@ -7,8 +7,8 @@
 
 |description|mobile web|PC web|
 |:---:|:---:|:---:|
-|메인화면<br>[index.html](index.html)|<img src="readmeImg/mobile1.jpg" width="200">|![](readmeImg/pc1.png)|
-|어린이집 소개<br>[introduction.html](introduction.html)|<img src="readmeImg/mobile2.jpg" width="200">|![](readmeImg/pc2.png)|
-|반별소개<br>[class.html](class.html)|<img src="readmeImg/mobile3.jpg" width="200">|![](readmeImg/pc3.png)|
-|연간일정<br>[schedule.html](schedule.html)|<img src="readmeImg/mobile4.jpg" width="200">|![](readmeImg/pc4.png)|
-|보육과정<br>[study.html](study.html)|<img src="readmeImg/mobile5.jpg" width="200">|![](readmeImg/pc5.png)|
+|메인화면<br>[index.html](index.html)|<img src="readmeImg/mobile1.jpg" width="200" height="300">|![](readmeImg/pc1.png)|
+|어린이집 소개<br>[introduction.html](introduction.html)|<img src="readmeImg/mobile2.jpg" width="200" height="300">|![](readmeImg/pc2.png)|
+|반별소개<br>[class.html](class.html)|<img src="readmeImg/mobile3.jpg" width="200" height="300">|![](readmeImg/pc3.png)|
+|연간일정<br>[schedule.html](schedule.html)|<img src="readmeImg/mobile4.jpg" width="200" height="300">|![](readmeImg/pc4.png)|
+|보육과정<br>[study.html](study.html)|<img src="readmeImg/mobile5.jpg" width="200" height="300">|![](readmeImg/pc5.png)|
