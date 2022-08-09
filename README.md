@@ -1,12 +1,14 @@
-# 어린이집 홍보 웹사이트
+# 어린이집 홍보 웹페이지
 ![](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
-<br/><br/>
+<br/>
 :globe_with_meridians: https://pulee1076.netlify.app/
 
-- 메인화면: [index.html](index.html)
-- 어린이집 소개: [introduction.html](introduction.html)
-- 반별소개: [class.html](class.html)
-- 연간일정: [schedule.html](schedule.html)
-- 보육과정: [study.html](study.html)
+|description|file|mobile web|PC web|
+|:---:|:---:|:---:|:---:|
+|메인화면|[index.html](index.html)|![](readmeImg/mobile1.jpg)|![](readmeImg/pc1.png)|
+|어린이집 소개 화면|[introduction.html](introduction.html)|![](readmeImg/mobile2.jpg)|![](readmeImg/pc2.png)|
+|반별소개 화면|[class.html](class.html)|![](readmeImg/mobile3.jpg)|![](readmeImg/pc3.png)|
+|연간일정 화면|[schedule.html](schedule.html)|![](readmeImg/mobile4.jpg)|![](readmeImg/pc4.png)|
+|보육과정 화면|[study.html](study.html)|![](readmeImg/mobile5.jpg)|![](readmeImg/pc5.png)|
